@@ -59,6 +59,24 @@
   box-shadow: 0 10px 24px rgba(60, 18, 12, 0.38);
 }
 
+/* Geçiş pill'leri kına paletinde */
+.kina-site .event-switch a {
+  background: rgba(250, 240, 228, 0.92);
+  color: #9a3b30;
+  border-color: rgba(180, 66, 58, 0.45);
+}
+
+.kina-site .event-switch a.active {
+  background: linear-gradient(110deg, #c45a3a, #8f2f28);
+  color: #fff3e4;
+  border-color: transparent;
+}
+
+/* Açıldığında içerik sabit pill'lerin altından başlasın */
+.kina-site.opened .kina-invitation {
+  padding-top: 64px;
+}
+
 .kina-site .kina-invitation {
   position: relative;
   z-index: 1;

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { EventSwitch } from "./EventSwitch";
 import { RsvpForm } from "./RsvpForm";
 
 const hennaDate = new Date("2026-08-15T19:00:00+03:00");
@@ -44,6 +45,7 @@ export function KinaInvitation() {
 
   return (
     <main className={opened ? "kina-site site opened" : "kina-site site"}>
+      <EventSwitch active="henna" />
       <video className="kina-bg-video" autoPlay muted loop playsInline aria-hidden="true">
         <source src="/background.mp4" type="video/mp4" />
       </video>
