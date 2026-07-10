@@ -52,3 +52,30 @@ label { display:block; color:#786558; font-size:.7rem; font-weight:600; margin:1
 .pickup-section { margin:-10px 0 34px; padding:25px 17px; border-top:1px solid rgba(121,87,57,.32); border-bottom:1px solid rgba(121,87,57,.32); }.pickup-section h3 { font-size:1.6rem; }.pickup-time { margin:9px 0 17px; color:#725c50; font:500 .9rem \'Playfair Display\',serif; }.pickup-time b { color:#4a342b; }.pickup-map-link { display:flex; align-items:center; gap:11px; min-height:64px; padding:10px 13px; border:1px solid #d6c0aa; border-radius:12px; background:linear-gradient(135deg,#f9f0e4,#ecddc8); color:#5c4439; text-align:left; text-decoration:none; box-shadow:0 6px 13px rgba(89,57,35,.08); }.pickup-map-link:hover { border-color:#a77b66; }.map-pin { display:grid; place-items:center; flex:0 0 30px; width:30px; height:30px; border-radius:50% 50% 50% 0; background:#b94f51; color:#b94f51; transform:rotate(-45deg); box-shadow:0 2px 4px rgba(99,43,42,.25); }.pickup-map-link span:nth-child(2) { flex:1; font-size:.78rem; }.pickup-map-link small { display:block; margin-top:3px; color:#8a7568; font-size:.64rem; }.pickup-map-link i { font-family:inherit; font-size:1rem; color:#9c6d5b; }
 
 .pickup-address { margin:-6px 0 15px; color:#80695b; font:500 .82rem/1.45 \'Playfair Display\',serif; }.pickup-map-preview { aspect-ratio:1.62; }
+
+/* ===== Düğün sayfası: sabit arka plan videosu (kına sayfasıyla aynı yapı) ===== */
+.wedding-bg-video { position:fixed; inset:0; z-index:0; width:100%; height:100%; object-fit:cover; object-position:center; filter:saturate(.9) contrast(1.05); pointer-events:none; }
+.wedding-site.opened { overflow:visible; }
+
+/* Davetiye şeffaf olsun ki sabit video arkadan görünsün */
+.wedding-site .invitation { background:transparent; overflow:visible; }
+.wedding-site .invitation .paper-noise { display:none; }
+.wedding-site .couple-art { mix-blend-mode:normal; filter:drop-shadow(0 8px 20px rgba(40,20,15,.28)); }
+
+/* Video üstündeki serbest yazılar açık renk + gölge ile okunur */
+.wedding-site .invitation .ornament { color:#fff1e2; text-shadow:0 2px 12px rgba(20,10,6,.75); }
+.wedding-site .invitation .eyebrow { color:#f0d4b0; text-shadow:0 1px 8px rgba(15,7,4,.7); }
+.wedding-site .invitation h2, .wedding-site .invitation h3 { color:#fff8ef; text-shadow:0 2px 14px rgba(15,7,4,.8); }
+.wedding-site .invitation h2 i { color:#f2b8bc; }
+.wedding-site .invitation .invitation-copy { color:#f5e6d4; text-shadow:0 1px 10px rgba(15,7,4,.75); }
+.wedding-site .invitation .families span { color:#f0d4b0; text-shadow:0 1px 8px rgba(15,7,4,.7); }
+.wedding-site .invitation .families b { color:#fff4e6; text-shadow:0 1px 8px rgba(15,7,4,.7); }
+.wedding-site .invitation .closing { color:#f5e6d4; text-shadow:0 1px 10px rgba(15,7,4,.75); }
+
+/* Kartlar video üstünde okunaklı kalsın (opaklık biraz artırıldı) */
+.wedding-site .event-card, .wedding-site .rsvp { background:rgba(255,251,243,.9); box-shadow:0 14px 34px rgba(30,15,10,.32); }
+
+/* Harita içeren bölümler (Konvoy Başlangıcı + Konum) kutuya dönüşsün */
+.wedding-site .pickup-section, .wedding-site .venue-section { border:1px solid rgba(121,87,57,.32); border-radius:20px; background:rgba(255,251,243,.9); box-shadow:0 14px 34px rgba(30,15,10,.32); padding:24px 17px 26px; margin:0 auto 30px; }
+.wedding-site .invitation .pickup-section .eyebrow, .wedding-site .invitation .venue-section .eyebrow { color:#8e6653; text-shadow:none; }
+.wedding-site .invitation .pickup-section h3, .wedding-site .invitation .venue-section h3 { color:#4a342b; text-shadow:none; }

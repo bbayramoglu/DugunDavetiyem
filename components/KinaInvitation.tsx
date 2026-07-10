@@ -53,8 +53,8 @@ export function KinaInvitation() {
         <div className="intro-shade" />
         <div className="intro-content">
           <p className="eyebrow light">DAVETLİSİNİZ</p>
-          <h1>İrem <i>&amp;</i> Tolgahan</h1>
-          <p className="intro-date">Kına Gecesi</p>
+          <h1>İrem&apos;in <i>Kına</i> Gecesi</h1>
+          <p className="intro-date">15 Ağustos 2026</p>
           <button className="open-button" onClick={() => setOpened(true)}>Davetiyeyi Aç <span>✦</span></button>
         </div>
       </section>
@@ -64,7 +64,7 @@ export function KinaInvitation() {
         <div className="ornament ornament-top">❦ <span>♡</span> ❦</div>
         <div className="content-shell">
           <p className="eyebrow">GELENEKSEL BİR GECE</p>
-          <h2>İrem <i>&amp;</i> Tolgahan</h2>
+          <h2>İrem&apos;in <i>Kına</i> Gecesi</h2>
           <p className="invitation-copy">
             Kına gecesinde sizleri de aramızda görmekten<br />
             büyük mutluluk duyarız.
@@ -88,11 +88,6 @@ export function KinaInvitation() {
             <div className="rule" />
             <p><b>{HENNA_TIME_LABEL}</b> · {HENNA_PROGRAM_LABEL}</p>
             <Countdown />
-          </div>
-
-          <div className="families">
-            <div><span>GELİNİN AİLESİ</span><b>Fatma &amp; İsa Ceylan</b></div>
-            <div><span>DAMADIN AİLESİ</span><b>Kerime &amp; Mesut Koçer</b></div>
           </div>
 
           <section className="venue-section">

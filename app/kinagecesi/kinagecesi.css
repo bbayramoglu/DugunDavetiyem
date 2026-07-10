@@ -101,11 +101,6 @@
   text-shadow: 0 1px 10px rgba(20, 8, 4, 0.7);
 }
 
-.kina-site .kina-invitation .families b {
-  color: #fff4e6;
-  text-shadow: 0 1px 8px rgba(20, 8, 4, 0.65);
-}
-
 .kina-site .kina-invitation .closing {
   color: #f5e6d4;
   text-shadow: 0 1px 10px rgba(20, 8, 4, 0.7);
@@ -123,15 +118,8 @@
   box-shadow: 0 11px 25px rgba(100, 45, 20, 0.1);
 }
 
-.kina-site .card-label,
-.kina-site .families span {
+.kina-site .card-label {
   color: #a66b4a;
-}
-
-/* Aile etiketleri video üstünde okunsun (isimler gibi açık renk + gölge) */
-.kina-site .kina-invitation .families span {
-  color: #f0d4b0;
-  text-shadow: 0 1px 8px rgba(20, 8, 4, 0.7);
 }
 
 .kina-site .rule {

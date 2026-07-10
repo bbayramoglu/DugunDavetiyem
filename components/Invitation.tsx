@@ -36,7 +36,11 @@ export function Invitation() {
   const [opened, setOpened] = useState(false);
 
   return (
-    <main className={opened ? "site opened" : "site"}>
+    <main className={opened ? "wedding-site site opened" : "wedding-site site"}>
+      <video className="wedding-bg-video" autoPlay muted loop playsInline aria-hidden="true">
+        <source src="/backgound-wedding.mp4" type="video/mp4" />
+      </video>
+
       <section className="intro" aria-hidden={opened}>
         <Image src="/couple-illustration.png" alt="" fill priority sizes="100vw" className="intro-image" />
         <div className="intro-shade" />
