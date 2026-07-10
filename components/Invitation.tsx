@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { EventSwitch } from "./EventSwitch";
 import { RsvpForm } from "./RsvpForm";
 
 const weddingDate = new Date("2026-08-16T20:00:00+03:00");
@@ -38,7 +37,6 @@ export function Invitation() {
 
   return (
     <main className={opened ? "site opened" : "site"}>
-      <EventSwitch active="wedding" />
       <section className="intro" aria-hidden={opened}>
         <Image src="/couple-illustration.png" alt="" fill priority sizes="100vw" className="intro-image" />
         <div className="intro-shade" />

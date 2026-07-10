@@ -52,12 +52,3 @@ label { display:block; color:#786558; font-size:.7rem; font-weight:600; margin:1
 .pickup-section { margin:-10px 0 34px; padding:25px 17px; border-top:1px solid rgba(121,87,57,.32); border-bottom:1px solid rgba(121,87,57,.32); }.pickup-section h3 { font-size:1.6rem; }.pickup-time { margin:9px 0 17px; color:#725c50; font:500 .9rem \'Playfair Display\',serif; }.pickup-time b { color:#4a342b; }.pickup-map-link { display:flex; align-items:center; gap:11px; min-height:64px; padding:10px 13px; border:1px solid #d6c0aa; border-radius:12px; background:linear-gradient(135deg,#f9f0e4,#ecddc8); color:#5c4439; text-align:left; text-decoration:none; box-shadow:0 6px 13px rgba(89,57,35,.08); }.pickup-map-link:hover { border-color:#a77b66; }.map-pin { display:grid; place-items:center; flex:0 0 30px; width:30px; height:30px; border-radius:50% 50% 50% 0; background:#b94f51; color:#b94f51; transform:rotate(-45deg); box-shadow:0 2px 4px rgba(99,43,42,.25); }.pickup-map-link span:nth-child(2) { flex:1; font-size:.78rem; }.pickup-map-link small { display:block; margin-top:3px; color:#8a7568; font-size:.64rem; }.pickup-map-link i { font-family:inherit; font-size:1rem; color:#9c6d5b; }
 
 .pickup-address { margin:-6px 0 15px; color:#80695b; font:500 .82rem/1.45 \'Playfair Display\',serif; }.pickup-map-preview { aspect-ratio:1.62; }
-
-/* Davetiyeler arası geçiş (Düğün / Kına) — üstte sabit pill'ler */
-.event-switch { position:fixed; top:15px; left:50%; transform:translateX(-50%); z-index:60; display:flex; gap:8px; }
-.event-switch a { min-width:76px; padding:9px 21px; border-radius:999px; font-size:.72rem; font-weight:600; letter-spacing:.12em; text-decoration:none; text-align:center; border:1px solid rgba(150,90,95,.45); background:rgba(248,239,226,.92); color:#6f4f52; box-shadow:0 4px 14px rgba(30,15,10,.22); transition:transform .2s,filter .2s; }
-.event-switch a.active { background:linear-gradient(110deg,#b76972,#895057); color:#fffaf0; border-color:transparent; }
-.event-switch a:hover { transform:translateY(-1px); filter:brightness(1.05); }
-/* Açıldığında içerik sabit pill'lerin altından başlasın */
-.opened .invitation { padding-top:64px; }
-@media (min-width:650px) { .opened .invitation { padding-top:64px; } }
