@@ -76,7 +76,7 @@ export function Invitation() {
           <section className="pickup-section">
             <p className="eyebrow">GÜNÜN İLK BULUŞMASI</p>
             <h3>Konvoy Başlangıcı</h3>
-            <p className="pickup-time"><b>18.00</b> · Gelin çıkartma</p>
+            <p className="pickup-time"><b>18.00</b> · Gelin Alma</p>
             <p className="pickup-address">Dağcıoğlu Apartmanı (Belke Yapı) No:18</p>
             <div className="map-preview pickup-map-preview">
               <iframe
