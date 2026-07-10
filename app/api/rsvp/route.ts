@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { isValidAttendance, normalizeGuestName } from "@/lib/rsvp";
+import { isValidAttendance, isValidEventType, normalizeGuestName } from "@/lib/rsvp";
 import { createServiceClient } from "@/lib/supabase";
 
 export async function POST(request: Request) {
@@ -8,9 +8,10 @@ export async function POST(request: Request) {
     const fullName = typeof body.fullName === "string" ? body.fullName.trim() : "";
     const note = typeof body.note === "string" ? body.note.trim().slice(0, 500) : "";
     const attendance = body.attendance;
+    const eventType = body.eventType ?? "wedding";
     const count = Number(body.guestCount);
 
-    if (fullName.length < 3 || fullName.length > 100 || !isValidAttendance(attendance)) {
+    if (fullName.length < 3 || fullName.length > 100 || !isValidAttendance(attendance) || !isValidEventType(eventType)) {
       return NextResponse.json({ message: "Lütfen tüm zorunlu alanları kontrol edin." }, { status: 400 });
     }
     if (attendance === "attending" && (!Number.isInteger(count) || count < 1 || count > 20)) {
@@ -24,6 +25,7 @@ export async function POST(request: Request) {
       attendance,
       guest_count: attendance === "attending" ? count : 0,
       note: note || null,
+      event_type: eventType,
     });
 
     if (error?.code === "23505") {

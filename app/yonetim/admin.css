@@ -3,3 +3,7 @@
 .admin-card h1 { margin:0 0 22px; text-align:center; font:500 2rem "Playfair Display",serif; }.admin-login { max-width:390px; margin:auto; }
 .admin-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:22px; }.admin-stats div { padding:14px 7px; border-radius:12px; text-align:center; background:#f1e5d4; }.admin-stats strong { display:block; font:600 1.7rem "Playfair Display",serif; }.admin-stats span { color:#796356; font-size:.65rem; }
 .response-list { display:grid; gap:9px; }.response-list article { display:flex; justify-content:space-between; gap:14px; padding:14px; background:#fffaf4; border:1px solid #e1cfbc; border-radius:12px; }.response-list b,.response-list span { display:block; }.response-list span,.response-list time { color:#806b5c; font-size:.75rem; margin-top:3px; }.response-list p { margin:7px 0 0; color:#5d4a3e; font-size:.82rem; }.response-list time { white-space:nowrap; }
+.event-filters { display:flex; gap:8px; margin-bottom:18px; justify-content:center; }
+.event-filters button { border:1px solid #d4b89a; border-radius:999px; padding:8px 16px; background:#f5ead8; color:#6b4a38; font-size:.72rem; font-weight:600; letter-spacing:.04em; transition:background .2s,border-color .2s,color .2s; }
+.event-filters button.active { background:#64463d; border-color:#64463d; color:#fffaf0; }
+.event-badge { display:inline-block; margin-right:6px; padding:2px 8px; border-radius:999px; background:#e8d4bc; color:#5c3f30; font-size:.62rem; font-weight:600; letter-spacing:.04em; }

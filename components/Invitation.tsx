@@ -104,7 +104,7 @@ export function Invitation() {
             </div>
           </section>
 
-          <RsvpForm />
+          <RsvpForm eventType="wedding" />
           <p className="closing">Sevgiyle bekliyoruz <span>♡</span></p>
         </div>
         <div className="ornament ornament-bottom">❦ <span>✦</span> ❦</div>

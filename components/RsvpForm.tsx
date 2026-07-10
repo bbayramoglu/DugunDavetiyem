@@ -1,9 +1,18 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import type { Attendance } from "@/lib/rsvp";
+import type { Attendance, EventType } from "@/lib/rsvp";
 
-export function RsvpForm() {
+const successMessages: Record<EventType, string> = {
+  wedding: "Yanıtınız bize ulaştı. Bu güzel günü sizinle paylaşmak için sabırsızlanıyoruz.",
+  henna: "Yanıtınız bize ulaştı. Kına gecesinde sizleri görmek için sabırsızlanıyoruz.",
+};
+
+type RsvpFormProps = {
+  eventType?: EventType;
+};
+
+export function RsvpForm({ eventType = "wedding" }: RsvpFormProps) {
   const [attendance, setAttendance] = useState<Attendance>("attending");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -20,12 +29,13 @@ export function RsvpForm() {
         attendance,
         guestCount: attendance === "attending" ? form.get("guestCount") : 0,
         note: form.get("note"),
+        eventType,
       }),
     });
     const data = await response.json().catch(() => ({}));
     if (response.ok) {
       setStatus("success");
-      setMessage("Yanıtınız bize ulaştı. Bu güzel günü sizinle paylaşmak için sabırsızlanıyoruz.");
+      setMessage(successMessages[eventType]);
       event.currentTarget.reset();
     } else {
       setStatus("error");

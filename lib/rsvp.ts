@@ -1,4 +1,5 @@
 export type Attendance = "attending" | "not_attending";
+export type EventType = "wedding" | "henna";
 
 export function normalizeGuestName(value: string) {
   return value
@@ -11,4 +12,8 @@ export function normalizeGuestName(value: string) {
 
 export function isValidAttendance(value: unknown): value is Attendance {
   return value === "attending" || value === "not_attending";
+}
+
+export function isValidEventType(value: unknown): value is EventType {
+  return value === "wedding" || value === "henna";
 }

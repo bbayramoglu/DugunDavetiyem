@@ -14,7 +14,7 @@ export async function GET(request: Request) {
 
     const { data, error } = await supabase
       .from("rsvps")
-      .select("id, full_name, attendance, guest_count, note, created_at")
+      .select("id, full_name, attendance, guest_count, note, event_type, created_at")
       .order("created_at", { ascending: false });
     if (error) throw error;
     return NextResponse.json({ rsvps: data });

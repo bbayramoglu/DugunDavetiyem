@@ -1,0 +1,246 @@
+.kina-site {
+  --ink: #2a1814;
+  --muted: #7a5a4f;
+  --paper: #f8efe4;
+  --paper-deep: #e8cdb8;
+  --rose: #b8423a;
+  --line: #c49a6c;
+  --gold: #c9923e;
+}
+
+.kina-bg-video {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.85) contrast(1.05);
+  pointer-events: none;
+}
+
+.kina-site.opened {
+  overflow: visible;
+}
+
+.kina-site .intro {
+  z-index: 10;
+}
+
+.kina-site .intro-shade {
+  background: linear-gradient(
+    180deg,
+    rgba(30, 12, 8, 0.62),
+    rgba(28, 10, 6, 0.38) 42%,
+    rgba(22, 8, 5, 0.78)
+  );
+}
+
+.kina-site .eyebrow {
+  color: #a66b4a;
+}
+
+.kina-site .eyebrow.light {
+  color: #fff3e4;
+}
+
+.kina-site i {
+  color: var(--gold);
+}
+
+.kina-site .intro h1 i {
+  color: #fff6e8;
+}
+
+.kina-site .open-button,
+.kina-site .submit-button {
+  background: linear-gradient(110deg, #c45a3a, #8f2f28);
+  box-shadow: 0 10px 24px rgba(60, 18, 12, 0.38);
+}
+
+.kina-site .kina-invitation {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  overflow: visible;
+}
+
+.kina-site .kina-invitation .paper-noise {
+  display: none;
+}
+
+.kina-site .kina-invitation .content-shell {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.kina-site .kina-invitation .ornament {
+  color: #fff1e2;
+  text-shadow: 0 2px 12px rgba(30, 12, 6, 0.7);
+}
+
+.kina-site .kina-invitation .eyebrow {
+  color: #f0d4b0;
+  text-shadow: 0 1px 8px rgba(20, 8, 4, 0.65);
+}
+
+.kina-site .kina-invitation h2,
+.kina-site .kina-invitation h3 {
+  color: #fff8ef;
+  text-shadow: 0 2px 14px rgba(20, 8, 4, 0.75);
+}
+
+.kina-site .kina-invitation .invitation-copy {
+  color: #f5e6d4;
+  text-shadow: 0 1px 10px rgba(20, 8, 4, 0.7);
+}
+
+.kina-site .kina-invitation .families b {
+  color: #fff4e6;
+  text-shadow: 0 1px 8px rgba(20, 8, 4, 0.65);
+}
+
+.kina-site .kina-invitation .closing {
+  color: #f5e6d4;
+  text-shadow: 0 1px 10px rgba(20, 8, 4, 0.7);
+}
+
+.kina-site .couple-art {
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 8px 20px rgba(90, 40, 20, 0.12));
+}
+
+.kina-site .event-card,
+.kina-site .rsvp {
+  border-color: rgba(160, 90, 50, 0.32);
+  background: rgba(255, 248, 238, 0.78);
+  box-shadow: 0 11px 25px rgba(100, 45, 20, 0.1);
+}
+
+.kina-site .card-label,
+.kina-site .families span {
+  color: #a66b4a;
+}
+
+/* Aile etiketleri video üstünde okunsun (isimler gibi açık renk + gölge) */
+.kina-site .kina-invitation .families span {
+  color: #f0d4b0;
+  text-shadow: 0 1px 8px rgba(20, 8, 4, 0.7);
+}
+
+.kina-site .rule {
+  background: var(--gold);
+}
+
+.kina-site .countdown {
+  color: #8a5e4a;
+}
+
+.kina-site .countdown strong {
+  color: #5c3020;
+}
+
+/* KONUM bölümünü event-card gibi okunaklı yarı saydam kutuya çevir */
+.kina-site .venue-section {
+  border: 1px solid rgba(160, 90, 50, 0.32);
+  border-radius: 20px;
+  background: rgba(255, 248, 238, 0.78);
+  box-shadow: 0 11px 25px rgba(100, 45, 20, 0.1);
+  padding: 26px 18px 28px;
+  margin: 0 auto 38px;
+}
+
+/* Kutu açık zeminde olduğu için içindeki yazılar koyu ve gölgesiz okunur */
+.kina-site .kina-invitation .venue-section .eyebrow {
+  color: #a66b4a;
+  text-shadow: none;
+}
+
+.kina-site .kina-invitation .venue-section h3 {
+  color: #4a2c20;
+  text-shadow: none;
+}
+
+.kina-site .venue-section p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.kina-site .map-preview {
+  border-color: #d4b08a;
+  background: #f0e0cc;
+}
+
+.kina-site .map-open {
+  color: #6b3f2e;
+}
+
+.kina-site .attendance-buttons button {
+  background: #faf0e4;
+  border-color: #e0c4a8;
+  color: #6b3f30;
+}
+
+.kina-site .attendance-buttons button.selected {
+  border-color: #b8423a;
+  background: #fff6ec;
+  box-shadow: inset 0 0 0 1px #b8423a;
+}
+
+.kina-site label {
+  color: #8a5e4a;
+}
+
+.kina-site input,
+.kina-site textarea {
+  border-color: #e8c9a8;
+  background: #fffaf4;
+  outline-color: #b8423a;
+}
+
+.kina-site .form-error {
+  color: #a1424b;
+}
+
+.kina-site .form-result span {
+  color: #b8423a;
+}
+
+.kina-site .closing {
+  color: #7a4e3a;
+}
+
+.kina-site .closing span {
+  color: #b8423a;
+}
+
+@media (min-width: 650px) {
+  .kina-site .kina-invitation {
+    padding-top: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kina-bg-video {
+    display: none;
+  }
+
+  .kina-site .intro-shade {
+    background: linear-gradient(180deg, #3a1a12, #2a120c);
+  }
+
+  /* Video gizlendiğinde sabit bir kağıt zemin kalsın */
+  .kina-site .kina-invitation {
+    background: radial-gradient(circle at 50% 0, #fff8ef 0, #f5e8d8 38%, #e6c9a8 100%);
+  }
+
+  .kina-site .kina-invitation .ornament {
+    color: #5c3828;
+    text-shadow: none;
+  }
+}
