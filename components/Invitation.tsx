@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { MadeByCredit } from "./MadeByCredit";
 import { RsvpForm } from "./RsvpForm";
 
 const weddingDate = new Date("2026-08-16T20:00:00+03:00");
@@ -112,6 +113,7 @@ export function Invitation() {
           <p className="closing">Sevgiyle bekliyoruz <span>♡</span></p>
         </div>
         <div className="ornament ornament-bottom">❦ <span>✦</span> ❦</div>
+        <MadeByCredit />
       </section>
     </main>
   );

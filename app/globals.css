@@ -79,3 +79,8 @@ label { display:block; color:#786558; font-size:.7rem; font-weight:600; margin:1
 .wedding-site .pickup-section, .wedding-site .venue-section { border:1px solid rgba(121,87,57,.32); border-radius:20px; background:rgba(255,251,243,.9); box-shadow:0 14px 34px rgba(30,15,10,.32); padding:24px 17px 26px; margin:0 auto 30px; }
 .wedding-site .invitation .pickup-section .eyebrow, .wedding-site .invitation .venue-section .eyebrow { color:#8e6653; text-shadow:none; }
 .wedding-site .invitation .pickup-section h3, .wedding-site .invitation .venue-section h3 { color:#4a342b; text-shadow:none; }
+
+/* Sayfa altındaki hazırlayan künyesi (iletişim linki) */
+.made-by { position:relative; z-index:1; margin:30px auto 2px; text-align:center; font-size:.66rem; letter-spacing:.03em; line-height:1.6; color:rgba(255,241,226,.72); text-shadow:0 1px 6px rgba(12,6,3,.6); }
+.made-by a { color:#fff6ec; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(255,246,236,.45); padding-bottom:1px; transition:opacity .2s; }
+.made-by a:hover { opacity:.75; }
