@@ -126,6 +126,29 @@
   background: var(--gold);
 }
 
+/* Etkinlik kartındaki program listesi (alt alta saatler) */
+.kina-site .program-list {
+  list-style: none;
+  margin: 12px auto 4px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  text-align: center;
+}
+
+.kina-site .program-list li {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: #5a3a2c;
+}
+
+.kina-site .program-list b {
+  color: #8f2f28;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
 .kina-site .countdown {
   color: #8a5e4a;
 }

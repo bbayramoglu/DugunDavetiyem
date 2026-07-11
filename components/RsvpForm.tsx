@@ -5,7 +5,7 @@ import type { Attendance, EventType } from "@/lib/rsvp";
 
 const successMessages: Record<EventType, string> = {
   wedding: "Yanıtınız bize ulaştı. Bu güzel günü sizinle paylaşmak için sabırsızlanıyoruz.",
-  henna: "Yanıtınız bize ulaştı. Kına gecesinde sizleri görmek için sabırsızlanıyoruz.",
+  henna: "Yanıtınız bize ulaştı. Gelin hamamında sizleri görmek için sabırsızlanıyoruz.",
 };
 
 type RsvpFormProps = {

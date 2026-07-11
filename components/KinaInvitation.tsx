@@ -4,14 +4,17 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { RsvpForm } from "./RsvpForm";
 
-const hennaDate = new Date("2026-08-15T19:00:00+03:00");
+const hennaDate = new Date("2026-08-15T14:00:00+03:00");
 const HENNA_DATE_LABEL = "15 Ağustos 2026, Cumartesi";
-const HENNA_TIME_LABEL = "19.00";
-const HENNA_PROGRAM_LABEL = "Kına Yakma";
-const HENNA_VENUE_NAME = "Mekan bilgisi yakında paylaşılacak";
-const HENNA_VENUE_ADDRESS = "Adres bilgisi yakında paylaşılacak";
-const HENNA_MAP_EMBED = "https://www.google.com/maps?q=Safranbolu&output=embed";
-const HENNA_MAP_LINK = "https://maps.app.goo.gl/";
+const HENNA_PROGRAM = [
+  { time: "14.00", label: "Yöresel dans ekibi eşliğinde kına töreni" },
+  { time: "15.00", label: "Oryantal show" },
+  { time: "16.00", label: "Yıkanma ve after parti" },
+];
+const HENNA_VENUE_NAME = "Tarihi Cinci Hamamı";
+const HENNA_VENUE_ADDRESS = "Safranbolu / Karabük";
+const HENNA_MAP_EMBED = "https://www.google.com/maps?q=Tarihi%20Cinci%20Hamam%C4%B1%2C%20Safranbolu&output=embed";
+const HENNA_MAP_LINK = "https://maps.app.goo.gl/h7wmr8F8xkWakd988?g_st=iw";
 
 function Countdown() {
   const [remaining, setRemaining] = useState({ days: 0, hours: 0, minutes: 0 });
@@ -31,7 +34,7 @@ function Countdown() {
   }, []);
 
   return (
-    <div className="countdown" aria-label="Kına gecesine kalan süre">
+    <div className="countdown" aria-label="Gelin hamamına kalan süre">
       <span><strong>{remaining.days}</strong> gün</span>
       <span><strong>{remaining.hours}</strong> saat</span>
       <span><strong>{remaining.minutes}</strong> dk</span>
@@ -53,7 +56,7 @@ export function KinaInvitation() {
         <div className="intro-shade" />
         <div className="intro-content">
           <p className="eyebrow light">DAVETLİSİNİZ</p>
-          <h1>İrem&apos;in <i>Kına</i> Gecesi</h1>
+          <h1>İrem&apos;in <i>Gelin</i> Hamamı</h1>
           <p className="intro-date">15 Ağustos 2026</p>
           <button className="open-button" onClick={() => setOpened(true)}>Davetiyeyi Aç <span>✦</span></button>
         </div>
@@ -63,10 +66,10 @@ export function KinaInvitation() {
         <div className="paper-noise" />
         <div className="ornament ornament-top">❦ <span>♡</span> ❦</div>
         <div className="content-shell">
-          <p className="eyebrow">GELENEKSEL BİR GECE</p>
-          <h2>İrem&apos;in <i>Kına</i> Gecesi</h2>
+          <p className="eyebrow">GELENEKSEL BİR GÜN</p>
+          <h2>İrem&apos;in <i>Gelin</i> Hamamı</h2>
           <p className="invitation-copy">
-            Kına gecesinde sizleri de aramızda görmekten<br />
+            Gelin hamamında sizleri de aramızda görmekten<br />
             büyük mutluluk duyarız.
           </p>
 
@@ -83,10 +86,14 @@ export function KinaInvitation() {
           </div>
 
           <div className="event-card">
-            <p className="card-label">KINA GECESİ</p>
+            <p className="card-label">GELİN HAMAMI</p>
             <p className="event-date">{HENNA_DATE_LABEL}</p>
             <div className="rule" />
-            <p><b>{HENNA_TIME_LABEL}</b> · {HENNA_PROGRAM_LABEL}</p>
+            <ul className="program-list">
+              {HENNA_PROGRAM.map((item) => (
+                <li key={item.time}><b>{item.time}</b> · {item.label}</li>
+              ))}
+            </ul>
             <Countdown />
           </div>
 
@@ -96,7 +103,7 @@ export function KinaInvitation() {
             <p>{HENNA_VENUE_ADDRESS}</p>
             <div className="map-preview">
               <iframe
-                title="Kına gecesi konumu"
+                title="Tarihi Cinci Hamamı konumu"
                 src={HENNA_MAP_EMBED}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
