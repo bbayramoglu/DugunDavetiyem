@@ -12,10 +12,10 @@ const HENNA_PROGRAM = [
   { time: "15.00", label: "Oryantal show" },
   { time: "16.00", label: "Yıkanma ve after parti" },
 ];
-const HENNA_VENUE_NAME = "Tarihi Cinci Hamamı";
-const HENNA_VENUE_ADDRESS = "Safranbolu / Karabük";
-const HENNA_MAP_EMBED = "https://www.google.com/maps?q=Tarihi%20Cinci%20Hamam%C4%B1%2C%20Safranbolu&output=embed";
-const HENNA_MAP_LINK = "https://maps.app.goo.gl/h7wmr8F8xkWakd988?g_st=iw";
+const HENNA_VENUE_NAME = "Bulak Ayan Hamamı";
+const HENNA_VENUE_ADDRESS = "Camiönü, 78000 Bulak / Karabük Merkez / Karabük";
+const HENNA_MAP_EMBED = "https://www.google.com/maps?q=Bulak%20Ayan%20Hamam%C4%B1%2C%20Karab%C3%BCk&output=embed";
+const HENNA_MAP_LINK = "https://maps.app.goo.gl/ViigZx2nDqVyWEjv9?g_st=iw";
 
 function Countdown() {
   const [remaining, setRemaining] = useState({ days: 0, hours: 0, minutes: 0 });
@@ -104,7 +104,7 @@ export function KinaInvitation() {
             <p>{HENNA_VENUE_ADDRESS}</p>
             <div className="map-preview">
               <iframe
-                title="Tarihi Cinci Hamamı konumu"
+                title="Bulak Ayan Hamamı konumu"
                 src={HENNA_MAP_EMBED}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
