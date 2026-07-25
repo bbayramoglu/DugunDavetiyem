@@ -1,13 +1,17 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const alt = "İrem'in gelin hamamı davetiyesi";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const runtime = "nodejs";
 
 export default async function OpenGraphImage() {
-  const hennaImage = await fetch(
-    new URL("../../public/kinagecesi.png", import.meta.url),
-  ).then((response) => response.arrayBuffer());
+  const hennaImage = await readFile(
+    join(process.cwd(), "public", "kinagecesi.png"),
+  );
+  const hennaImageData = `data:image/png;base64,${hennaImage.toString("base64")}`;
 
   return new ImageResponse(
     (
@@ -41,7 +45,7 @@ export default async function OpenGraphImage() {
         </div>
         <img
           alt=""
-          src={hennaImage as unknown as string}
+          src={hennaImageData}
           style={{
             height: 620,
             objectFit: "contain",

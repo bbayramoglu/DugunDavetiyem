@@ -1,13 +1,17 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const alt = "İrem & Tolga'nın düğün davetiyesi";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const runtime = "nodejs";
 
 export default async function OpenGraphImage() {
-  const coupleImage = await fetch(
-    new URL("../public/couple-illustration.png", import.meta.url),
-  ).then((response) => response.arrayBuffer());
+  const coupleImage = await readFile(
+    join(process.cwd(), "public", "couple-illustration.png"),
+  );
+  const coupleImageData = `data:image/png;base64,${coupleImage.toString("base64")}`;
 
   return new ImageResponse(
     (
@@ -41,7 +45,7 @@ export default async function OpenGraphImage() {
         </div>
         <img
           alt=""
-          src={coupleImage as unknown as string}
+          src={coupleImageData}
           style={{
             height: 610,
             objectFit: "contain",
