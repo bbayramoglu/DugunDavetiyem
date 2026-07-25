@@ -36,12 +36,12 @@ export default async function OpenGraphImage() {
           alt=""
           src={backgroundImageData}
           style={{
-            bottom: 0,
+            height: 630,
             left: 0,
             objectFit: "cover",
             position: "absolute",
-            right: 0,
             top: 0,
+            width: 1200,
           }}
         />
         <div
