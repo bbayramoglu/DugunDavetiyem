@@ -11,14 +11,18 @@ export default async function OpenGraphImage() {
   const hennaImage = await readFile(
     join(process.cwd(), "public", "kinagecesi.png"),
   );
+  const backgroundImage = await readFile(
+    join(process.cwd(), "public", "og-henna-background.jpg"),
+  );
   const hennaImageData = `data:image/png;base64,${hennaImage.toString("base64")}`;
+  const backgroundImageData = `data:image/jpeg;base64,${backgroundImage.toString("base64")}`;
 
   return new ImageResponse(
     (
       <div
         style={{
           alignItems: "center",
-          background: "linear-gradient(135deg, #6c1d1d 0%, #b15038 100%)",
+          background: "#6c1d1d",
           color: "#fff4df",
           display: "flex",
           height: "100%",
@@ -28,6 +32,24 @@ export default async function OpenGraphImage() {
           width: "100%",
         }}
       >
+        <img
+          alt=""
+          src={backgroundImageData}
+          style={{
+            height: "100%",
+            inset: 0,
+            objectFit: "cover",
+            position: "absolute",
+            width: "100%",
+          }}
+        />
+        <div
+          style={{
+            background: "linear-gradient(90deg, rgba(64, 12, 12, 0.84) 0%, rgba(64, 12, 12, 0.52) 58%, rgba(64, 12, 12, 0.08) 100%)",
+            inset: 0,
+            position: "absolute",
+          }}
+        />
         <div
           style={{
             border: "2px solid rgba(255, 244, 223, 0.35)",

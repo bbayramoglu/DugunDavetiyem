@@ -11,15 +11,19 @@ export default async function OpenGraphImage() {
   const coupleImage = await readFile(
     join(process.cwd(), "public", "couple-illustration.png"),
   );
+  const backgroundImage = await readFile(
+    join(process.cwd(), "public", "og-wedding-background.jpg"),
+  );
   const coupleImageData = `data:image/png;base64,${coupleImage.toString("base64")}`;
+  const backgroundImageData = `data:image/jpeg;base64,${backgroundImage.toString("base64")}`;
 
   return new ImageResponse(
     (
       <div
         style={{
           alignItems: "center",
-          background: "linear-gradient(135deg, #f8e6dd 0%, #d9a394 100%)",
-          color: "#512e2a",
+          background: "#244664",
+          color: "#fffaf3",
           display: "flex",
           height: "100%",
           overflow: "hidden",
@@ -28,9 +32,27 @@ export default async function OpenGraphImage() {
           width: "100%",
         }}
       >
+        <img
+          alt=""
+          src={backgroundImageData}
+          style={{
+            height: "100%",
+            inset: 0,
+            objectFit: "cover",
+            position: "absolute",
+            width: "100%",
+          }}
+        />
         <div
           style={{
-            border: "2px solid rgba(81, 46, 42, 0.25)",
+            background: "linear-gradient(90deg, rgba(17, 32, 43, 0.84) 0%, rgba(17, 32, 43, 0.54) 58%, rgba(17, 32, 43, 0.1) 100%)",
+            inset: 0,
+            position: "absolute",
+          }}
+        />
+        <div
+          style={{
+            border: "2px solid rgba(255, 250, 243, 0.45)",
             borderRadius: 24,
             inset: 24,
             position: "absolute",
