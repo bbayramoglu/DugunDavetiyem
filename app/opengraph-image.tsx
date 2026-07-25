@@ -59,7 +59,18 @@ export default async function OpenGraphImage() {
             position: "absolute",
           }}
         />
-        <div style={{ display: "flex", flexDirection: "column", width: "54%", zIndex: 1 }}>
+        <div
+          style={{
+            background: "rgba(255, 250, 243, 0.92)",
+            borderRadius: 24,
+            color: "#44221d",
+            display: "flex",
+            flexDirection: "column",
+            padding: "28px 32px",
+            width: "54%",
+            zIndex: 1,
+          }}
+        >
           <div style={{ fontSize: 22, letterSpacing: 5 }}>DÜĞÜN DAVETİYESİ</div>
           <div style={{ fontSize: 74, fontWeight: 700, marginTop: 20 }}>İrem &amp; Tolga</div>
           <div style={{ fontSize: 34, marginTop: 28 }}>16 Ağustos 2026, Pazar</div>

@@ -59,7 +59,18 @@ export default async function OpenGraphImage() {
             position: "absolute",
           }}
         />
-        <div style={{ display: "flex", flexDirection: "column", width: "54%", zIndex: 1 }}>
+        <div
+          style={{
+            background: "rgba(255, 247, 225, 0.92)",
+            borderRadius: 24,
+            color: "#511c1c",
+            display: "flex",
+            flexDirection: "column",
+            padding: "28px 32px",
+            width: "54%",
+            zIndex: 1,
+          }}
+        >
           <div style={{ fontSize: 22, letterSpacing: 5 }}>GELİN HAMAMI DAVETİYESİ</div>
           <div style={{ fontSize: 68, fontWeight: 700, marginTop: 20 }}>İrem&apos;in Gelin Hamamı</div>
           <div style={{ fontSize: 34, marginTop: 28 }}>15 Ağustos 2026, Cumartesi</div>
